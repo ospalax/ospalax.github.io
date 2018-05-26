@@ -1,4 +1,4 @@
-# ospalax.github.io
+# [ospalax - Freelancer](https://ospalax.github.io/)
 
 # [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
 
@@ -6,7 +6,7 @@
 
 ## Preview
 
-[![Freelancer Preview](https://startbootstrap.com/assets/img/templates/freelancer.jpg)](https://blackrockdigital.github.io/startbootstrap-freelancer/)
+[![Freelancer Preview](https://startbootstrap.com/assets/img/templates/freelancer.jpg)](https://ospalax.github.io/)
 
 **[View Live Preview](https://blackrockdigital.github.io/startbootstrap-freelancer/)**
 
