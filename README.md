@@ -1,4 +1,4 @@
-# [ospalax - Freelancer](https://ospalax.github.io/)
+# [ospalax](https://ospalax.github.io/)
 
 This web presentation is based on a bootstrap theme from startbootstrap.com and hosted on gitlab pages.
 
