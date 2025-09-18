@@ -1,7 +1,6 @@
-startbootstrap-freelancer-gh-pages.zip
-startbootstrap-freelancer-gh-pages
-CV_Petr_Ospaly.odt
 CVs/*
 node_modules
 *.xcf
 img/portfolio/*/*
+/bak/
+*~bak
