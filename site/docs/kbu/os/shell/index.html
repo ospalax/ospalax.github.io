@@ -11,23 +11,23 @@
     
     <meta name="author" content="Petr Ospalý"> 
     
-    <link rel="canonical" href="https://www.ospalax.cz/posts/2025/25_03_15_first/"><link rel="icon" type="image/png" sizes="192x192" href="../../../img/favicon.ico" />
+    <link rel="canonical" href="https://www.ospalax.cz/docs/kbu/os/shell/"><link rel="icon" type="image/png" sizes="192x192" href="../../../../img/favicon.ico" />
 
 
     
  
-<title>First Post - ospalax.cz</title>
+<title>Shell Scripting - ospalax.cz</title>
 
 
-<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
-<link href="../../../css/normalize.css" rel="stylesheet">
-<link href="../../../css/terminal.css" rel="stylesheet">
-<link href="../../../css/theme.css" rel="stylesheet">
-<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
-<link href="../../../css/theme.footer.css" rel="stylesheet">
+<link href="../../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../../css/normalize.css" rel="stylesheet">
+<link href="../../../../css/terminal.css" rel="stylesheet">
+<link href="../../../../css/theme.css" rel="stylesheet">
+<link href="../../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../../css/theme.footer.css" rel="stylesheet">
 <!-- ospalax color palette -->
-<link href="../../../css/palettes/ospalax.css" rel="stylesheet">
+<link href="../../../../css/palettes/ospalax.css" rel="stylesheet">
 
 <!-- page layout -->
 <style>
@@ -58,20 +58,20 @@
 
     
     <!-- search css support -->
-<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<link href="../../../../css/search/bootstrap-modal.css" rel="stylesheet">
 <!-- search scripts -->
 <script>
-    var base_url = "../../..",
+    var base_url = "../../../..",
     shortcuts = "{}";
 </script>
-<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
-<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
-<script src="../../../js/mkdocs/base.js" defer></script>
+<script src="../../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../../js/mkdocs/base.js" defer></script>
     
     
     
     
-    <script src="../../../search/main.js"></script>
+    <script src="../../../../search/main.js"></script>
     
 
     
@@ -79,7 +79,7 @@
 
 <body class="terminal"><div class="container">
     <div class="terminal-nav">
-        <img width=32 height=32 src=../../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <img width=32 height=32 src=../../../../img/logo/ospalax-logo-blue.png>&nbsp;
         <header class="terminal-logo">
             <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
         </header>
@@ -90,7 +90,7 @@
                 
                 
                 <li property="itemListElement" typeof="ListItem">
-                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                    <a href="../../../.." class="menu-item " property="item" typeof="WebPage">
                         <span property="name">Home</span>
                     </a>
                     <meta property="position" content="0">
@@ -98,7 +98,7 @@
                 
                 
                 <li property="itemListElement" typeof="ListItem">
-                    <a href="../../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                    <a href="../../../../me/contact/" class="menu-item " property="item" typeof="WebPage">
                         <span property="name">Contact</span>
                     </a>
                     <meta property="position" content="1">
@@ -142,7 +142,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../..">Home</a>
+    terminal-mkdocs-side-nav-item" href="../../../..">Home</a>
         
     
     
@@ -161,7 +161,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../me/contact/">Contact</a>
+    terminal-mkdocs-side-nav-item" href="../../../../me/contact/">Contact</a>
         
     
     
@@ -189,7 +189,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../me/">About Me</a>
+    terminal-mkdocs-side-nav-item" href="../../../../me/">About Me</a>
     
     
         
@@ -210,7 +210,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../me/experience/">Experience</a>
+    terminal-mkdocs-side-nav-item" href="../../../../me/experience/">Experience</a>
         
     
     </li>
@@ -229,7 +229,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../me/contributions/">Contributions</a>
+    terminal-mkdocs-side-nav-item" href="../../../../me/contributions/">Contributions</a>
         
     
     </li>
@@ -248,7 +248,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../me/CV_Petr_Ospaly.pdf">CV</a>
+    terminal-mkdocs-side-nav-item" href="../../../../me/CV_Petr_Ospaly.pdf">CV</a>
         
     
     </li>
@@ -280,7 +280,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../docs/">Knowledge Base</a>
+    terminal-mkdocs-side-nav-item--active" href="../../../">Knowledge Base</a>
     
     
         
@@ -302,7 +302,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../../docs/kbu/os/">KBU (Linux)</a>
+    terminal-mkdocs-side-nav-item--active" href="../">KBU (Linux)</a>
     
     </li>
             
@@ -317,22 +317,60 @@
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
-    
-    
-    
-    
-    
-
 <section id="mkdocs-terminal-content">
-    <h1 id="first-post">First Post<a class="headerlink" href="#first-post" title="Permanent link">#</a></h1>
-<p>Started to use <a href="">mkdocs</a> to save nuggets of wisdom and snippets which I have to regularly re-discover or which were so hard to work out that I want to have it somewhere tucked away for safe-keeping.</p>
-<!-- more -->
-
-<p>Hopefully I will not forget to extend this knowledge base...</p>
-</section>
-
-<section id="mkdocs-terminal-after-content">
-    
+    <h1 id="shell-scripting">Shell Scripting<a class="headerlink" href="#shell-scripting" title="Permanent link">#</a></h1>
+<p>Series of slides covering *NIX shell environment and <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> shell language.</p>
+<h2 id="shell-interpreters-todo"><a href="">Shell Interpreter(s)</a> (TODO)<a class="headerlink" href="#shell-interpreters-todo" title="Permanent link">#</a></h2>
+<ul>
+<li>Bourne Shell, BSD shells</li>
+<li>BASH (Bourne Again Shell)</li>
+<li>Bashisms vs POSIX</li>
+<li><code>checkbashisms</code> script</li>
+<li><code>busybox</code></li>
+<li>Configuration files</li>
+<li>Shell history</li>
+<li>Command aliases</li>
+</ul>
+<h2 id="environment-todo"><a href="">Environment</a> (TODO)<a class="headerlink" href="#environment-todo" title="Permanent link">#</a></h2>
+<ul>
+<li>Variables and values</li>
+<li><code>env</code> / <code>printenv</code></li>
+<li><code>export</code>, <code>unset</code></li>
+<li>Variable expansion</li>
+<li>Whitespace related issues</li>
+<li>Evil <code>eval</code></li>
+<li>Sourcing</li>
+<li>Subshells</li>
+</ul>
+<h2 id="flow-control-todo"><a href="">Flow Control</a> (TODO)<a class="headerlink" href="#flow-control-todo" title="Permanent link">#</a></h2>
+<ul>
+<li><code>if</code>/<code>elif</code>/<code>else</code>/<code>fi</code></li>
+<li><code>case</code>/<code>esac</code></li>
+<li><code>for</code> loop</li>
+<li><code>while</code> loop</li>
+<li><code>return</code>, <code>break</code>, <code>continue</code>, <code>exit</code></li>
+<li>Standard input and output</li>
+<li>Heredoc and redirections</li>
+</ul>
+<h2 id="functions-and-scope-todo"><a href="">Functions and Scope</a> (TODO)<a class="headerlink" href="#functions-and-scope-todo" title="Permanent link">#</a></h2>
+<ul>
+<li>Defining functions</li>
+<li>Global vs local scope</li>
+<li>Returning values</li>
+<li>Simulating argument list</li>
+<li>Importing foreign functions</li>
+<li>Signals and <code>trap</code> command</li>
+</ul>
+<h2 id="regular-expressions-todo"><a href="">Regular Expressions</a> (TODO)<a class="headerlink" href="#regular-expressions-todo" title="Permanent link">#</a></h2>
+<ul>
+<li>Pattern vs match</li>
+<li><code>hello</code> vs <code>h...o</code></li>
+<li><code>hel*o</code>, <code>hel\+o</code>, <code>hel\{1,1\}o</code></li>
+<li><code>^$</code></li>
+<li><code>[0-9]</code>, <code>[^0-9]</code>, <code>[[:alnum:]]</code></li>
+<li><code>[abc]\|[ABC]</code></li>
+<li><code>sed 's/\(Oh, Hi\) Mark\(.*\)/\1 Bob\2/'</code></li>
+</ul>
 </section>
 
             </main>
@@ -343,6 +381,12 @@
             
             <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><span style="color: #00000000"> # made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span></p>
             
+        </div>
+        <div id="terminal-mkdocs-footer-prev-next">
+            <nav class="btn-group">
+                <a href="../linux/" title="Linux OS">Previous</a>
+                
+            </nav>
         </div>
     </div>
 </footer>
