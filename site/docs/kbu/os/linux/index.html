@@ -320,8 +320,26 @@
 <section id="mkdocs-terminal-content">
     <h1 id="linux-os">Linux OS<a class="headerlink" href="#linux-os" title="Permanent link">#</a></h1>
 <p>Series of slides describing UNIX-like OSes with examples from Linux environment but generic enough to be applicable on other *NIX platforms.</p>
+<ul>
+<li>
 <p><strong>This series should be read in order!</strong></p>
 <p><em>I have put some thought in the structure of chapters of this series and I made a lot of effort to introduce every new term, topic, tool and mechanism logically in the way which they depend on each other. Every chapter build upon previous one without referencing back and forth.</em></p>
+</li>
+<li>
+<p><strong>Beware of code snippets!</strong></p>
+<p><em>Do *NOT* just copy-paste code from the slides to your terminal... Retype it! Especially since the slides are made with Office suite and single/double quotes might be (often are) replaced with typographic "curved" styled quotes... (sorry)</em></p>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code># you can copy these character from here
+# if you cannot find them on your keyboard...
+
+-      is dash
+--     is double-dash
+`      backquote or backtick
+&#39;      single-quote (vertical, straight, ASCII)
+&quot;      double-quote (vertical, straight, ASCII)
+</code></pre></div>
+<p><em>I plan to redo these with Latex - it will be more version-control friendly too...</em></p>
+</li>
+</ul>
 <h2 id="intro-to-os"><a href="../OS01.pdf">Intro to OS</a><a class="headerlink" href="#intro-to-os" title="Permanent link">#</a></h2>
 <ul>
 <li>Birdview of Operating Systems landscape</li>
@@ -359,7 +377,10 @@
 <li>Aliases</li>
 <li>Shell profiles (<code>$PS1</code>)</li>
 <li>Unicode and UTF-8 (<code>$LANG</code>)</li>
-<li>Text editor</li>
+<li>
+<p>Text editor</p>
+<p><strong>Note</strong>: <em>Bash supports <a href="https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html">extended globs</a> which can be turned on with <code>shopt</code> builtin.</em></p>
+</li>
 </ul>
 <h2 id="users-groups-and-processes-todo"><a href="">Users, Groups and Processes</a> (TODO)<a class="headerlink" href="#users-groups-and-processes-todo" title="Permanent link">#</a></h2>
 <ul>
