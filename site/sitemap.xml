@@ -2,46 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.ospalax.cz/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/docs/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/docs/kbu/os/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/docs/kbu/os/linux/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/docs/kbu/os/shell/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/me/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/me/contact/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/me/contributions/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/me/experience/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/posts/template/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://www.ospalax.cz/posts/2025/25_03_15_first/</loc>
-         <lastmod>2025-09-20</lastmod>
+         <lastmod>2026-04-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.ospalax.cz/things/</loc>
+         <lastmod>2026-04-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.ospalax.cz/things/maker/arduino_lcdplay_01/</loc>
+         <lastmod>2026-04-20</lastmod>
     </url>
 </urlset>
