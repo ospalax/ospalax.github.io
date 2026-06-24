@@ -11,23 +11,23 @@
     
     <meta name="author" content="Petr Ospalý"> 
     
-    <link rel="canonical" href="https://www.ospalax.cz/rants/gnulinuxp2/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+    <link rel="canonical" href="https://www.ospalax.cz/things/scripts/cisco_packettracer/"><link rel="icon" type="image/png" sizes="192x192" href="../../../img/favicon.ico" />
 
 
     
  
-<title>Linux vs GNU/Linux PART 2 - ospalax.cz</title>
+<title>Cisco PacketTracer - ospalax.cz</title>
 
 
-<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
-<link href="../../css/normalize.css" rel="stylesheet">
-<link href="../../css/terminal.css" rel="stylesheet">
-<link href="../../css/theme.css" rel="stylesheet">
-<link href="../../css/theme.tile_grid.css" rel="stylesheet">
-<link href="../../css/theme.footer.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
 <!-- ospalax color palette -->
-<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+<link href="../../../css/palettes/ospalax.css" rel="stylesheet">
 
 <!-- page layout -->
 <style>
@@ -58,20 +58,20 @@
 
     
     <!-- search css support -->
-<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
 <!-- search scripts -->
 <script>
-    var base_url = "../..",
+    var base_url = "../../..",
     shortcuts = "{}";
 </script>
-<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
-<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
-<script src="../../js/mkdocs/base.js" defer></script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
     
     
     
     
-    <script src="../../search/main.js"></script>
+    <script src="../../../search/main.js"></script>
     
 
     
@@ -79,7 +79,7 @@
 
 <body class="terminal"><div class="container">
     <div class="terminal-nav">
-        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <img width=32 height=32 src=../../../img/logo/ospalax-logo-blue.png>&nbsp;
         <header class="terminal-logo">
             <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
         </header>
@@ -90,7 +90,7 @@
                 
                 
                 <li property="itemListElement" typeof="ListItem">
-                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
                         <span property="name">Home</span>
                     </a>
                     <meta property="position" content="0">
@@ -98,7 +98,7 @@
                 
                 
                 <li property="itemListElement" typeof="ListItem">
-                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                    <a href="../../../me/contact/" class="menu-item " property="item" typeof="WebPage">
                         <span property="name">Contact</span>
                     </a>
                     <meta property="position" content="1">
@@ -146,7 +146,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+    terminal-mkdocs-side-nav-item" href="../../..">Home</a>
         
     
     
@@ -165,7 +165,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+    terminal-mkdocs-side-nav-item" href="../../../me/contact/">Contact</a>
         
     
     
@@ -193,7 +193,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    terminal-mkdocs-side-nav-item" href="../../../me/">About Me</a>
     
     
         
@@ -214,7 +214,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+    terminal-mkdocs-side-nav-item" href="../../../me/experience/">Experience</a>
         
     
     </li>
@@ -233,7 +233,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+    terminal-mkdocs-side-nav-item" href="../../../me/contributions/">Contributions</a>
         
     
     </li>
@@ -252,7 +252,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+    terminal-mkdocs-side-nav-item" href="../../../me/CV_Petr_Ospaly.pdf">CV</a>
         
     
     </li>
@@ -284,7 +284,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/">Knowledge Base</a>
     
     
         
@@ -306,7 +306,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/kbu/os/">KBU (Linux)</a>
     
     </li>
             
@@ -324,26 +324,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
-        
-    
-    </li>
-            
-        
-            
-            
-                
-                
-            
-
-             
-                <li class="terminal-mkdocs-side-nav-li-ul-li">
-    
-        
-        
-            <a class="
-
-    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
         
     
     </li>
@@ -362,7 +343,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/#knowledge-pages">KB Pages</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
         
     
     </li>
@@ -381,7 +362,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">&nbsp; → Linux vs GNU/Linux</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/#knowledge-pages">KB Pages</a>
         
     
     </li>
@@ -400,7 +381,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/linuxdesktop/">&nbsp; → Linux Desktop</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/kbpages/gnulinux/">&nbsp; → Linux vs GNU/Linux</a>
         
     
     </li>
@@ -419,7 +400,26 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../docs/#howtos">HowTos</a>
+    terminal-mkdocs-side-nav-item" href="../../../docs/kbpages/linuxdesktop/">&nbsp; → Linux Desktop</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../docs/#howtos">HowTos</a>
         
     
     </li>
@@ -451,7 +451,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    terminal-mkdocs-side-nav-item--active" href="../../">Things</a>
     
     
         
@@ -472,7 +472,7 @@
         
             <a class="
 
-    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+    terminal-mkdocs-side-nav-item" href="../../maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
         
     
     </li>
@@ -488,11 +488,9 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        
-            <a class="
+        <span class="
 
-    terminal-mkdocs-side-nav-item" href="../../things/scripts/cisco_packettracer/">Cisco PacketTracer</a>
-        
+    terminal-mkdocs-side-nav-item--active">Cisco PacketTracer</span>
     
     </li>
             
@@ -523,7 +521,7 @@
         
         <a class="
 
-    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    terminal-mkdocs-side-nav-item" href="../../../rants/">Rated R( a n t s )</a>
     
     
         
@@ -541,70 +539,78 @@
 </nav><hr>
 <nav>
     <ul>
-        <li><a href="#times-are-changing">Times are changing</a></li>
-        <li><a href="#i-want-stainlesslinux">I want stainless/Linux!</a></li>
+        <li><a href="#first-run">First Run</a></li>
+        <li><a href="#setting-up">Setting Up</a></li>
         
     </ul>
 </nav>
 </aside>
             <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <h1 id="linux-vs-gnulinux-part-2">Linux vs GNU/Linux PART 2<a class="headerlink" href="#linux-vs-gnulinux-part-2" title="Permanent link">#</a></h1>
-<p>This is controversial continuation of my article:</p>
-<p><a href="/docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>.</p>
-<p><strong>Read that first...</strong></p>
-<p>So I ended up stating that <code>GNU/Linux</code> is forced upon us by copylefty zealots
-and my preference is just to say: <code>Linux</code></p>
-<p><strong>But...</strong></p>
-<hr />
-<h2 id="times-are-changing">Times are changing<a class="headerlink" href="#times-are-changing" title="Permanent link">#</a></h2>
-<p>Did you hear about
-<a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">rust</a>?</p>
-<p>Haven't you noticed any of those very <em>enthusiastic</em> (read: fanatic) rust
-programmers with a weird profile picture and flaming desire to rewrite
-<strong>everything</strong> in the only sacred language of rust?</p>
-<p>I did notice and so did the industry:</p>
-<p><a href="https://www.businessinsider.com/furry-fandom-big-tech-software-developers-2022-3">How Furries Came to Rule the Tech Industry - Business
-Insider</a></p>
-<p><strong>What is my point here?</strong></p>
-<p>This: <a href="https://lwn.net/Articles/1007907/">Rewriting essential Linux packages in Rust</a></p>
-<p>Like I said, times are changing, the age of
-<a href="https://www.youtube.com/watch?v=T4Upf_B9RLQ">ensh!ttification</a>&nbsp;💩 is already upon
-us and when
-<a href="https://www.reddit.com/r/rust/comments/vyelva/why_are_there_so_many_furry_rustaceans/">furries</a>,
-I mean <a href="https://en.wiktionary.org/wiki/Rustacean">rustaceans</a>, are invading
-<a href="https://en.wikipedia.org/wiki/Rust_for_Linux">Linux spaces</a> and they want to
-rewrite <strong>rock-solid</strong>, <strong>battle-tested</strong> <code>GNU</code> core utilities <em>(written in
-venerated </em><em>C</em><em>)</em> for very <strong>dubious</strong> and unconvincing reasons <em>(read the
-<a href="https://lwn.net/Articles/1007907/">article</a> and
-<a href="https://hackernoon.com/the-rust-rewrites-nobody-asked-for">this</a>)</em> then they as
-well can demand to call this new system:</p>
-<p><strong>cargo/Linux</strong></p>
-<p>Rust does not support near as much platforms as C and by extension
-Linux... So, what does it mean? Linux will start dropping architectures?</p>
-<p><a href="https://www.theregister.com/software/2025/11/03/debian-demands-rust-or-rust-in-peace-for-legacy-ports/799273">Debian supports a lot more processor architectures – seven officially, and another 11 maintained ports – than Rust does.</a></p>
-<p>I agree with this sentiment:</p>
-<p><a href="https://felipec.wordpress.com/2025/02/13/rust-not-for-linux/">Rust doesn’t belong in the Linux kernel; it’s all about ideology</a></p>
-<p>and this:</p>
-<p><a href="https://www.nichstack.com/p/cargo-cult">The problem with Rust</a></p>
-<hr />
-<h2 id="i-want-stainlesslinux">I want stainless/Linux!<a class="headerlink" href="#i-want-stainlesslinux" title="Permanent link">#</a></h2>
-<p>Can't the furries just make their own <strong>rustednix</strong> and stop infecting already established, stable and healthy projects???</p>
-<p><strong>Rust is a disease of the metal...</strong></p>
-<p>Rust-lang is a disease of Linux kernel...</p>
-<p><em>(Oh, btw, you can
-<a href="https://docs.kernel.org/process/coding-assistants.html">vibe-rust</a> Linux
-now...)</em></p>
-<p>Maybe I want to distance myself from all of this. Maybe calling my system
-<code>GNU/Linux</code> is not so bad after all...</p>
-<p>Call me <a href="https://en.wiktionary.org/wiki/contrarian">contrarian</a> if you must...</p>
-<p>Perhaps one day Linux will be fully <em>rusted</em> and on that day I will probably
-say:</p>
+    <h1 id="cisco-packettracer">Cisco PacketTracer<a class="headerlink" href="#cisco-packettracer" title="Permanent link">#</a></h1>
+<p>I needed to install <a href="https://www.netacad.com/resources/lab-downloads?courseLang=en-US">Cisco
+PacketTracer</a>
+app.</p>
+<p>It is required for this course:</p>
 <ul>
-<li><strong>I run <a href="https://en.wikipedia.org/wiki/List_of_BSD_operating_systems">someBSD</a></strong></li>
+<li><a href="https://www.netacad.com/courses/getting-started-cisco-packet-tracer?courseLang=en-US">https://www.netacad.com/courses/getting-started-cisco-packet-tracer?courseLang=en-US</a></li>
 </ul>
-<p><code>¯\_(ツ)_/¯</code></p>
-<p>P.S. I don't hate on rust per say - just the community surrounding it... I wrote more on that: <a href="/rants/rust/">Cult of Rust</a></p>
+<p>There are three problems:</p>
+<ol>
+<li>I don't use <a href="https://ubuntu.com">Ubuntu</a> to install the only provided
+   package for Linux</li>
+<li>No way I will run software like this directly on my system</li>
+<li>Installing in VM will eat my RAM and disk space</li>
+</ol>
+<p>So I made a tiny script to build and run this blob inside a Linux
+container.</p>
+<p>It is in this repo: <a href="https://github.com/ospalax/bitsnips">bitsnips</a></p>
+<p>The image is still little <a href="/rants/bloat/">bloated</a> - but that is the norm
+these days...</p>
+<p>If you check my <code>Dockerfile</code> then you will notice that I really did maximum to
+keep the image small (squashing the layers might help a little).</p>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code>REPOSITORY                    TAG         IMAGE ID      CREATED       SIZE
+localhost/cisco_packettracer  latest      9a51015287b7  24 hours ago  1.32 GB
+</code></pre></div>
+<hr />
+<h2 id="first-run">First Run<a class="headerlink" href="#first-run" title="Permanent link">#</a></h2>
+<p>Please check the repo for the <code>README</code> and guidance - I will not cover it
+here extensively.</p>
+<h3 id="download-the-deb-package">Download the deb package<a class="headerlink" href="#download-the-deb-package" title="Permanent link">#</a></h3>
+<p>The application is free to download here (if the link changes try to search for it...):</p>
+<ul>
+<li><a href="https://www.netacad.com/resources/lab-downloads?courseLang=en-US">https://www.netacad.com/resources/lab-downloads?courseLang=en-US</a></li>
+</ul>
+<h3 id="build-the-image">Build the image<a class="headerlink" href="#build-the-image" title="Permanent link">#</a></h3>
+<p>Adjust the <code>CISCO_FILE</code> or save it as:</p>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code>download/CiscoPacketTracer_900_Ubuntu_64bit.deb
+</code></pre></div>
+<p>Run the build:</p>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code>./cisco_packettracer.sh build
+</code></pre></div>
+<h3 id="run-the-container">Run the container<a class="headerlink" href="#run-the-container" title="Permanent link">#</a></h3>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code>./cisco_packettracer.sh run
+</code></pre></div>
+<p>If the build was successful and you are using <code>Xorg</code> then it should work
+fine.</p>
+<p>On the startup couple of windows will show up.</p>
+<p>I was not sure what is the question here and I just clicked no:</p>
+<p><img width=800px src="../../../img/cisco_packettracer/cisco_01.jpg" /></p>
+<hr />
+<h2 id="setting-up">Setting Up<a class="headerlink" href="#setting-up" title="Permanent link">#</a></h2>
+<p>The script will mount local directory on your system so the Cisco app can
+store login credentials - otherwise you would have to re-login on every
+run...</p>
+<p>I recommend to enable the <strong>"Keep me logged in"</strong>:</p>
+<p><img width=800px src="../../../img/cisco_packettracer/cisco_02.jpg" /></p>
+<p>For some reason spawning browser from within the container stopped working but
+you can click on <strong>"Advanced Settings"</strong> and enable internal web browser:</p>
+<p><img width=800px src="../../../img/cisco_packettracer/cisco_03.jpg" /></p>
+<p>Then you login:</p>
+<p><img width=800px src="../../../img/cisco_packettracer/cisco_04.jpg" /></p>
+<p>And Voilà:</p>
+<p><img width=800px src="../../../img/cisco_packettracer/cisco_05.jpg" /></p>
+<p><strong>It works!</strong></p>
 </section>
 
             </main>
@@ -615,6 +621,13 @@ say:</p>
             
             <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
             
+        </div>
+        <div id="terminal-mkdocs-footer-prev-next">
+            <nav class="btn-group">
+                <a href="../../maker/arduino_lcdplay_01/" title="Arduino LCD Experiment">Previous</a>
+                |
+                <a href="../../../rants/" title="Index">Next</a>
+            </nav>
         </div>
     </div>
 </footer>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/docs/kbpages/linuxdesktop/"><link rel="icon" type="image/png" sizes="192x192" href="../../../img/favicon.ico" />
+
+
+    
+ 
+<title>&nbsp; → Linux Desktop - ospalax.cz</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../../..",
+    shortcuts = "{}";
+</script>
+<script src="../../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item--active" href="../../">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../#knowledge-pages">KB Pages</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../gnulinux/">&nbsp; → Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">&nbsp; → Linux Desktop</span>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../#howtos">HowTos</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../things/scripts/cisco_packettracer/">Cisco PacketTracer</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../rants/">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#tldr">TL;DR</a></li>
+        <li><a href="#make-it-yours">Make it yours</a></li>
+        <li><a href="#windows-are-bad-mkay">Windows are bad, M'Kay?</a></li>
+        <li><a href="#the-year-of-the-linux-desktop">The Year of the Linux Desktop</a></li>
+        <li><a href="#the-paradox">The Paradox</a></li>
+        <li><a href="#what-distro-then">What distro then?</a></li>
+        <li><a href="#what-about-bsd">What about *BSD?</a></li>
+        <li><a href="#final-words">Final words</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="linux-desktop">Linux Desktop<a class="headerlink" href="#linux-desktop" title="Permanent link">#</a></h1>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
+<p><strong>IMHO</strong> Linux Desktop with all its warts (and there are many) is the <strong>best
+platform</strong> to run on your PC and laptop <strong>with a caveat</strong>...</p>
+<p><em>It will NOT (!) be flawless experience out of the box</em> because Linux is a
+<em>LEGO</em> set - <strong>DIY</strong> (Do-It-Yourself) system and it is as good as you make it!</p>
+<p>The bottom line is:</p>
+<p><q>It can be the <strong>"bestest Desktop evah"</strong>... for
+<strong>YOU</strong> (and only you specifically).</q></p>
+<p><img width=800px src="../../../img/desktop/nicedesktop.jpg" alt="Random Linux Screenshot" /></p>
+<hr />
+<h2 id="make-it-yours">Make it yours<a class="headerlink" href="#make-it-yours" title="Permanent link">#</a></h2>
+<p>I made a <a href="/docs/kbu/os/linux/">Linux course for beginners</a> - I recommend to check
+out <a href="/docs/kbu/os/OS01.pdf">the first part</a> (intro) and <a href="/docs/kbu/os/OS02.pdf">the second
+part</a> (UI).</p>
+<p>Linux has many flavours of graphical desktops (each with different set of
+problems) but anyone can find what suits them the best:</p>
+<ul>
+<li>matured, fancy, bloated but reasonably polished <a href="https://kde.org/">KDE</a></li>
+<li>conservative and lean <a href="https://xfce.org/">XFCE</a></li>
+<li>hot mess from RedHat <a href="https://www.gnome.org/">GNOME-HELL</a> (some like it...)</li>
+<li>minimalist window managers: <a href="https://openbox.org/">Openbox</a>, <a href="https://fluxbox.org/">Fluxbox</a></li>
+<li>minimalist tiling managers: <a href="https://dwm.suckless.org/">dwm</a>, <a href="http://awesomewm.org/">awesome</a></li>
+<li>fancy tiling managers: <a href="https://i3wm.org/">i3</a>, <a href="https://hypr.land/">Hyprland</a></li>
+</ul>
+<p>This was not a complete listing... <a href="https://en.wikipedia.org/wiki/Comparison_of_X_window_managers">There are too many</a>.</p>
+<p>You can run any of these on any kind of Linux distribution and that is a whole
+another story...</p>
+<p>How many of them are there can be tracked here: <a href="https://distrowatch.com/">distrowatch.com</a></p>
+<p>Running Linux as a desktop and a daily driver is a mixed bag and it requires
+some fiddling but so does running anything else...</p>
+<p>The difference is - Linux is actually and truly <strong>customizable</strong>.</p>
+<hr />
+<h2 id="windows-are-bad-mkay">Windows are bad, M'Kay?<a class="headerlink" href="#windows-are-bad-mkay" title="Permanent link">#</a></h2>
+<p><img width=800px src="../../../img/desktop/MrMackey_mkay.jpg" alt="Mr. Mackey from South Park" /></p>
+<p>People do not realize that they were coerced into <em>"Windows"</em> way of things
+because M$ spent ton of money to push their system via
+<a href="https://en.wikipedia.org/wiki/Original_equipment_manufacturer">OEM</a> partners
+on every PC and laptop imaginable.</p>
+<p>When regular people are not exposed to any other operating systems then they
+became indoctrinated and develop wrong expectation on how to use their
+computers...</p>
+<p>Windows user's view of computing is:</p>
+<ul>
+<li>OS is preinstalled and <strong>PC = Windows</strong>...</li>
+<li>Downloading dubious executables from shoddy websites is normal...</li>
+<li>Getting <strong>CD</strong> with obsolete drivers and bunch of malware with it is the way...</li>
+<li>Operating system is getting slower and slower until you must reinstall...</li>
+<li>They want you to have M$ account...</li>
+<li>If you need something then hope someone made GUI app for it...</li>
+<li>If something does not work then <strong>reboot and reboot again...</strong></li>
+<li>If M$ wants to install broken updates then <strong>you cannot do anything about it...</strong></li>
+<li>If M$ wants to reboot your PC then <strong>you cannot do anything about it...</strong></li>
+<li>If you want to have smooth fonts then poor you...</li>
+<li>If you want to read PDFs and copy text around then suffer...</li>
+<li>If you want to have control over your hardware and system then forget it...</li>
+</ul>
+<p><img width=800px src="../../../img/desktop/it_crowd.jpg" alt="IT Crowd meme" /></p>
+<p><strong>This article is full of my opinions of course but as someone who is running
+Linux desktop since 2008 - I think I can provide some insights.</strong></p>
+<hr />
+<h2 id="the-year-of-the-linux-desktop">The Year of the Linux Desktop<a class="headerlink" href="#the-year-of-the-linux-desktop" title="Permanent link">#</a></h2>
+<p>The Year of the Linux Desktop is such a meme that it even has a website:</p>
+<ul>
+<li><a href="https://yotld.com/">https://yotld.com/</a></li>
+</ul>
+<p><strong>Although it never came so close to actually happening like in 2026.</strong></p>
+<p>The reason is the
+<a href="https://www.forbrukerradet.no/news-in-english/digital-products-and-services-are-getting-worse-but-the-trend-can-be-reversed/">ensh!ttification</a>&nbsp;💩
+of <a href="https://microslop.com/">Microslop</a>'s Windows 11:</p>
+<ul>
+<li><a href="https://tech.yahoo.com/ai/copilot/articles/microsoft-putting-end-microslop-windows-115701717.html">Yahoo - Microsoft is putting an end to microslop on Windows 11</a></li>
+<li><a href="https://futurism.com/artificial-intelligence/windows-users-refusing-upgrade-windows-11-ai">Vast Number of Windows Users Refusing to Upgrade After Microsoft’s Embrace of AI Slop</a></li>
+<li><a href="https://news.ycombinator.com/item?id=46772212">What is going on with Windows 11?</a></li>
+<li><a href="https://www.youtube.com/watch?v=8hfmvQjVIIQ">The Windows 11 Disaster Microsoft Didn’t See Coming </a></li>
+<li><a href="https://www.techbrew.com/stories/2026/04/16/is-it-time-to-recall-windows-11">Is it time to recall Windows 11?</a></li>
+<li><a href="https://www.youtube.com/@ClownfishTV/search?query=windows%2011">YouTubers have plenty of content</a></li>
+</ul>
+<p>It was a double-punch and the second came from <a href="https://store.steampowered.com/">Valve</a>:</p>
+<ul>
+<li><a href="https://www.steamdeck.com/en/">SteamDeck - Linux Handheld</a></li>
+<li><a href="https://www.protondb.com/">ProtonDB - Windows games on Linux</a></li>
+<li><a href="https://store.steampowered.com/steamos">SteamOS - Linux distro from Valve</a></li>
+</ul>
+<p>I never saw so many users trying Linux for the first time.</p>
+<hr />
+<h2 id="the-paradox">The Paradox<a class="headerlink" href="#the-paradox" title="Permanent link">#</a></h2>
+<p>As Linux is getting wave of new users the open-source community is throwing
+wrench into it...</p>
+<h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">#</a></h3>
+<p>I started with <a href="https://www.ubuntu.com/">Ubuntu</a> (<em>Ubuntu 6.06 LTS (Dapper
+Drake)</em>) as I&nbsp;mentioned in <a href="/me/">my profile</a> but I would never recommend any
+recent release of that distribution to anyone - instead of providing more
+user-friendly polished version of <a href="https://www.debian.org/">Debian</a> on which
+their system is based - they introduced their own tools and way of doing things
+which I don't find good nor user-friendly.</p>
+<p>E.g. <a href="https://www.eff.org/deeplinks/2012/10/privacy-ubuntu-1210-amazon-ads-and-data-leaks">amazon ads and privacy
+violation</a>,
+<a href="https://ma.ttias.be/what-exactly-being-sent-ubuntu-motd/">sending your data</a>,
+yet another config tool <a href="https://netplan.io/">netplan</a>,
+<a href="https://snapcraft.io/">snaps</a> vs classic packages - I myself like to use
+containers to run applications but I don't think their solution is convenient
+much.</p>
+<h3 id="canonical">Canonical<a class="headerlink" href="#canonical" title="Permanent link">#</a></h3>
+<p><a href="https://canonical.com/">The company behind Ubuntu</a> is replacing battle-tested
+rock-solid <a href="/docs/kbpages/gnulinux/">GNU</a> utilities with <a href="https://ostechnix.com/rust-coreutils-update-bug-fix-ubuntu-25-10/">buggy new
+implementation</a>
+and there is just not a reason to do it.</p>
+<p>Linux is (was) deemed as super stable system and it does not look good when
+things like this happen to a <a href="https://en.wikipedia.org/wiki/Newbie">newbie</a>
+running Linux for the first time.</p>
+<p>It is enough to deal with weird wifi/bluetooth cards and dual graphic hell on
+laptops which do not work out of the box and you must scour the internet for
+forums and helpful posts to fix it...</p>
+<h3 id="redhat">RedHat<a class="headerlink" href="#redhat" title="Permanent link">#</a></h3>
+<p>Some made a point to migrate to RedHat based distros because of <a href="https://lwn.net/Articles/1014002/">this
+replacement of GNU utils</a>.</p>
+<p>Here I can say that you will just step out of the frying pan, into the fire...</p>
+<p>Redhat is hiding behind <a href="https://www.freedesktop.org/">freedesktop.org</a> and
+they had for years unhealthy influence on Linux ecosystem (<strong>they also did many
+good things:</strong> work on the kernel, drivers etc.).</p>
+<p>There was a <a href="https://without-systemd.org/wiki/index_php/Arguments_against_systemd/">lot of
+noise</a>
+with <a href="https://en.wikipedia.org/wiki/Systemd">systemd</a> (<a href="https://suckless.org/sucks/systemd/">systemd is the best
+example of Suck</a>).</p>
+<p>RedHat has notorious <a href="https://en.wikipedia.org/wiki/Not_invented_here">NIH</a>
+(Not-Invented-Here) syndrom, e.g. their old beef with
+<a href="https://developers.redhat.com/blog/2018/08/29/intro-to-podman">Docker</a>:</p>
+<blockquote>
+<p><em>Podman offers an experience similar to the Docker command line...enabling us
+to say goodbye to big fat daemons.</em></p>
+</blockquote>
+<p>And yet from this
+<a href="https://linux.slashdot.org/story/20/01/18/0236253/why-did-red-hat-drop-its-support-for-dockers-runtime-engine">discussion</a>:</p>
+<blockquote>
+<p><em>There was also Red Hat's issue with "no big fat daemons." If that's the
+case, how do they justify their stance on systemd?</em></p>
+</blockquote>
+<p>No argument there... on one hand they push <strong>systemd monstrosity</strong> and on the
+other <q>fat daemons are bad</q>...</p>
+<p>Dishonest much?</p>
+<p>And their feud continues by means of offering basically the same product as <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> but on their technology: <a href="https://thenewstack.io/red-hat-enters-the-cloud-native-developer-desktop-market/">Podman
+Desktop</a></p>
+<p>RedHat is known for hijacking and then killing projects
+(<a href="https://thenewstack.io/say-goodbye-to-coreos/">CoreOS</a>,
+<a href="https://www.jeffgeerling.com/blog/2023/im-done-red-hat-enterprise-linux/">CentOS</a>),
+recent <a href="https://www.theregister.com/software/2025/07/12/the-price-of-software-freedom-is-eternal-politics/1061363">Xlibre
+controversy</a>.</p>
+<p>And on top of all of it they now push the
+<a href="https://www.redhat.com/en/products/ai">aislop</a> into their offering including
+<a href="https://linux.slashdot.org/story/25/02/04/2047240/red-hat-plans-to-add-ai-to-fedora-and-gnome">Fedora</a>...</p>
+<p>I would steer clear of RedHat products.</p>
+<hr />
+<h2 id="what-distro-then">What distro then?<a class="headerlink" href="#what-distro-then" title="Permanent link">#</a></h2>
+<p>I cannot answer that for you - you must do what I did: <a href="https://en.wiktionary.org/wiki/distro-hopping">distro
+hopping</a></p>
+<p>Try few of them - visit their websites look at their docs, their screenshots,
+check their forums and get the feel.</p>
+<p>Most importantly: <strong>install and try</strong></p>
+<p>Actually <strong>NO</strong>... <strong>DO!</strong></p>
+<p><img width=800px src="../../../img/desktop/yoda.jpg" alt="Yoda's famous: Do or do not, there is no try." /></p>
+<p>You can use <a href="https://www.virtualbox.org/">Virtualbox</a> or unused old laptop.</p>
+<p>You can experiment with desktop environments on every of them or maybe pick a
+distro based on what is their <strong>default</strong> most polished desktop experience.</p>
+<p>Once you find something you like then be serious about it and give it time -
+make it primary machine for everything including work.</p>
+<p>If there is some Windows-only application which you need then
+<a href="https://en.wikipedia.org/wiki/Wine_(software)">Wine</a> might help.</p>
+<p>Point is to give it fair <strike>try</strike>/do and don't try to use it as
+Windows... With Linux you have more capable and open platform to play with so
+adjust to it...</p>
+<p><strong>You will encounter issues</strong> and that is almost guaranteed but during the
+process of solving them you will learn a lot.</p>
+<p>If you know why you want to switch to Linux then you will find the rewards
+worth the journey.</p>
+<p>If you just want less sucky Windows then I don't know:</p>
+<p><em>Maybe just grab Windows XP and disconnect from the internet?</em></p>
+<p><code>¯\_(ツ)_/¯</code></p>
+<hr />
+<h2 id="what-about-bsd">What about *BSD?<a class="headerlink" href="#what-about-bsd" title="Permanent link">#</a></h2>
+<p>They are decade(s) behind Linux in many aspects but... maybe... one day...
+maybe.</p>
+<hr />
+<h2 id="final-words">Final words<a class="headerlink" href="#final-words" title="Permanent link">#</a></h2>
+<p>It feels like a <a href="/rants/">rant</a> but I think it is good to be honest and I&nbsp;am
+way past of being <strong>Linux evangelist</strong> (if I ever was one).</p>
+<p>If you don't know why you would want to run Linux instead of anything else then
+I&nbsp;will not try to preach to you - I&nbsp;don't want to be anyone's
+personal tech support guy.</p>
+<p>If you recognize the benefits of running system like Linux then good for you.</p>
+<p>The rest can suffer whatever next is coming their way from
+<a href="https://microslop.com/">Microslop</a>.</p>
+<p>P.S. I don't consider Apple products as competition and it is a whole another
+topic and not even worth my time to tackle.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+        <div id="terminal-mkdocs-footer-prev-next">
+            <nav class="btn-group">
+                <a href="../gnulinux/" title="&nbsp; → Linux vs GNU/Linux">Previous</a>
+                |
+                <a href="../../../things/" title="Index">Next</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
