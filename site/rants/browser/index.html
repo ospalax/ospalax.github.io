@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/rants/browser/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+
+
+    
+ 
+<title>Browsing for Browser - ospalax.cz</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#browser-prisons">Browser prisons</a></li>
+        <li><a href="#what-to-do">What to do?</a></li>
+        <li><a href="#different-approach">Different approach?</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="browsing-for-browser">Browsing for Browser<a class="headerlink" href="#browsing-for-browser" title="Permanent link">#</a></h1>
+<p>I touched upon this in my <a href="/rants/cloudflare/">rant on everything internet</a> (and cloudflare&nbsp;💩).</p>
+<p><strong>💩&nbsp;Google</strong> is evil and by extension their browser engine (chrome) too.</p>
+<p>You know spying and all...</p>
+<p><strong>Also don't forget that they were <a href="https://www.malwarebytes.com/blog/news/2026/05/google-chromes-silent-4gb-ai-download-problem">installing
+slop 💩</a>
+on your machine without you knowing...</strong></p>
+<h2 id="browser-prisons">Browser prisons<a class="headerlink" href="#browser-prisons" title="Permanent link">#</a></h2>
+<p>This is as sad as it can get as browser runs (almost) 24/7 on my computer and it is the
+gate to the Internet... to knowledge, work and entertainment.</p>
+<p>I don't use any chromium based browsers - but <a href="https://www.theregister.com/software/2025/07/08/firefox-is-fine-the-people-running-it-are-not/1341313">mozilla is
+evil</a>
+too if not more and the alternatives are nowhere.</p>
+<p><a href="https://brave.com/">Brave browser</a> is still chromium under the hood with all
+the warts that thing has - I still prefer my pimped-up firefox (especially
+<a href="https://ublockorigin.com/">uBlock Origin</a> and
+<a href="https://noscript.net/">NoScript</a>).</p>
+<p>There is <a href="https://ladybird.org/">ladybird project</a> but recently they joined
+<a href="https://ladybird.org/posts/adopting-rust/">furries</a> and so I am not holding my
+breath for that one.</p>
+<p>We don't have alternatives - only chrome flavours (with <a href="https://www.pcworld.com/article/2490090/google-warns-chrome-users-that-ad-blockers-like-ublock-origin-will-soon-be-removed.html">Manifest v3</a> coming soon; although <a href="https://brave.com/blog/brave-shields-manifest-v3/">brave might still be viable</a>) and <a href="https://en.wikipedia.org/wiki/Category:Web_browsers_based_on_Firefox">firefox flavours</a> and both
+are run by evil companies:</p>
+<ul>
+<li><a href="https://time.com/4060575/alphabet-google-dont-be-evil/">Google is Evil</a></li>
+<li><a href="https://www.washingtontimes.com/news/2025/sep/23/google-admits-censorship-pushed-biden-administration-invites-back/">Google Censorship</a></li>
+<li><a href="https://www.malwarebytes.com/blog/news/2026/05/google-chromes-silent-4gb-ai-download-problem">Googleslop</a></li>
+<li><a href="https://fortune.com/2025/09/05/google-425-7-million-verdict-for-spying-on-users-smartphones-for-nearly-a-decade/">Google spy on you</a></li>
+<li><a href="https://www.pcmag.com/news/mozilla-signs-lucrative-3-year-google-search-deal-for-firefox">No Mozilla without Google</a></li>
+<li><a href="https://www.theregister.com/software/2025/03/02/mozilla-responds-after-terms-of-usage-privacy-policy-change/660938">Mozilla sells your data</a></li>
+<li><a href="https://blog.mozilla.org/en/mozilla/mozilla-brand-next-era-of-tech/">Mozilla is crew of activists</a></li>
+<li><a href="https://www.theverge.com/2020/8/11/21363424/mozilla-layoffs-quarter-staff-250-people-new-revenue-focus">Mozilla fires devs...</a></li>
+<li><a href="https://en.wikipedia.org/w/index.php?title=Mitchell_Baker&amp;oldid=1102372789#Negative_salary-achievements_correlation_controversy">...to give raise to CEO</a></li>
+<li><a href="https://lunduke.locals.com/post/4387539/firefox-money-investigating-the-bizarre-finances-of-mozilla">Mozilla wastes your donation money</a></li>
+</ul>
+<p>Damn.</p>
+<hr />
+<h2 id="what-to-do">What to do?<a class="headerlink" href="#what-to-do" title="Permanent link">#</a></h2>
+<p>I gave it a little thought and what is the hardest part of browser which makes
+it so difficult to entry?</p>
+<p>Well, the <a href="https://en.wikipedia.org/wiki/Browser_engine">browser engine</a>,
+right?</p>
+<p>But what is browser engine?</p>
+<p>In nutshell (some part could be compartmentalized):</p>
+<ul>
+<li>networking stack (HTTP, websockets etc.)</li>
+<li><strong>render HTML and style it with CSS</strong> (<strong>&lt;&lt;&lt; THIS</strong>)</li>
+<li>integrated javascript engine (with DOM manipulation)</li>
+<li>integrated wasm engine</li>
+</ul>
+<p>My thoughts:</p>
+<ul>
+<li>internet protocols were implemented and reimplemented multiple times across projects and
+  programming languages - this could be fully lifted from somewhere</li>
+<li>javascript engine was implemented few times too and probably could be lifted
+  also</li>
+<li>same for wasm</li>
+</ul>
+<p><strong>The biggest obstacle is the parsing of HTML and rendering with CSS.</strong></p>
+<p>That is the biggest mess of all.</p>
+<p>We have sites which are decades old which still work on <strong>all</strong> of our modern
+browsers (all two of them 🤣 😭)...</p>
+<p>This is also the reason why no one ever stepped up to create viable alternative
+- that is until the <a href="https://ladybird.org/">ladybird</a> browser project.</p>
+<p>They got to alpha stage rather quickly (in a year or two?) but still have long
+way to go to do all the fixups so that they can deal with all the quirks of
+HTML/CSS.</p>
+<p>The standard evolved and its implementations too (it was two-way street often
+times) and so across decades we have various historic versions of HTML and CSS.</p>
+<p>Ladybird tries to match big browser treatment of the standard and nonstandard
+behaviors and that is why it will take time to get there.</p>
+<hr />
+<h2 id="different-approach">Different approach?<a class="headerlink" href="#different-approach" title="Permanent link">#</a></h2>
+<p>What about just give up on this?</p>
+<p>I mean, what if we browse internet as someone with a <strong>disability</strong>?</p>
+<p>Their readers do not care about CSS at all - sure some websites might be really
+incomprehensible without CSS but I believe this could be workarounded in the
+renderer (or left to rot).</p>
+<p>I am not saying that regular people will give up on the browsing with fancy CSS
+but for someone like me who puts value on other things (privacy, hardware
+sovereignty, full control) that could be viable option.</p>
+<p>The website (their server) cannot see if I am rendering their polished design
+correctly or at all - interacting with site could be in spartan mode where we
+don't need to be prisoners in one of the two (or three) camps.</p>
+<p>A browser with full control over javascript which will not allow some rogue
+website to do whatever they want on my machine would be good enough for me to
+sacrifice nicely rendered page with CSS while still be able to do my e-banking
+and reasonable internet browsing.</p>
+<p>Hmmm 🤔</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
