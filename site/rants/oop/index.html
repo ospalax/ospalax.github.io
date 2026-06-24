@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/rants/oop/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+
+
+    
+ 
+<title>OOP was a mistake - ospalax.cz</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#out-of-the-tar-pit">Out of the Tar Pit</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+        <li><a href="#alternatives-exist">Alternatives exist</a></li>
+        <li><a href="#hijacked-terminology">Hijacked terminology</a></li>
+        <li><a href="#object-oriented-undefined">Object-Oriented undefined</a></li>
+        <li><a href="#not-everything-is-tree">Not everything is tree</a></li>
+        <li><a href="#future-is-less-classy">Future is less classy :)</a></li>
+        <li><a href="#slander-with-a-class">Slander with a class</a></li>
+        <li><a href="#oop-good-parts">OOP Good Parts (?)</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="oop-was-a-mistake">OOP was a mistake<a class="headerlink" href="#oop-was-a-mistake" title="Permanent link">#</a></h1>
+<p><em>This rant is work-in-progress as I keep encountering funny quotes over time.</em></p>
+<p>I really recommend this talk as a lot of research came into the presentation:</p>
+<p><a href="https://www.youtube.com/watch?v=wo84LFzx5nI">Casey Muratori – The Big OOPs: Anatomy of a Thirty-five-year Mistake – BSC 2025</a></p>
+<p><img width=800px src="../../img/oop/casey_oops_lineage.png" alt="Real Lineage of OOP" /></p>
+<p>There is also succinct (10 mins) Casey's story:</p>
+<p><a href="https://www.youtube.com/watch?v=ToBF_mLxEcI">Switching away from OOP</a></p>
+<p>On libraries shipped in OOP style:</p>
+<blockquote>
+<p><em>Shipping Object-Oriented code sucks for integration. All of the principles
+of Object-Oriented fight the ability to integrate stuff.</em></p>
+<p><em>The whole paradigm is a LIE. The lie is that if something is Object-Oriented
+then it will be easier for someone else to integrate it because it's all
+encapsulated but the truth is the opposite.</em></p>
+<p><em>The only things they can do are things you've already thought of and
+provided interfaces for.</em></p>
+</blockquote>
+<p>I don't necessarily agree with <strong>everything</strong> Casey is saying (just almost all
+of it) as I&nbsp;do like many <a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>'s
+ideas but I&nbsp;am also not convinced that everything should be designed as a
+living cell organism (Alan's original idea for
+<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented</a> -
+more in other sections).</p>
+<p><img width=800px src="../../img/oop/casey_oops_paradox.png" alt="Alan's paradoxical quote" /></p>
+<p>I definitely agree with Casey that if software is running on a single compute
+(no distributed computing) then creating artificial barriers (encapsulation)
+results in inefficient friction and <a href="/rants/bloat/">bloated layered software</a>.</p>
+<hr />
+<h2 id="out-of-the-tar-pit">Out of the Tar Pit<a class="headerlink" href="#out-of-the-tar-pit" title="Permanent link">#</a></h2>
+<p>The paper <a href="https://curtclifton.net/papers/MoseleyMarks06a.pdf">Out of&nbsp;the&nbsp;Tar Pit</a> is partial rebuttal to
+the <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">No&nbsp;Silver Bullet</a> by <a href="https://en.wikipedia.org/wiki/Fred_Brooks">Fred
+Brooks</a> of <a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">The&nbsp;Mythical
+Man-Month</a> fame.</p>
+<blockquote>
+<p><em>The bottom line is that all forms of OOP rely on state (contained within
+objects) and in general all behaviour is affected by this state. As a result
+of this, OOP suffers directly from the problems associated with state
+described above, and as such we believe that it does not provide an adequate
+foundation for avoiding complexity.</em></p>
+<p><em>To make things more concrete we then give an outline for a potential
+complexity-minimizing approach based on functional programming and Codd’s
+relational model of data.</em></p>
+</blockquote>
+<hr />
+<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link">#</a></h2>
+<p>I am not vehemently against the religion of OOP - I can see the benefits in
+some cases but I believe that we did not get here on the merit of OOP.</p>
+<p><code>&lt;joke&gt;</code><strong>I am inclined to think that it was the hard push from book publishers
+(muddy topic needs more books)</strong><code>&lt;/joke&gt;</code> and especially the
+<a href="https://en.wikipedia.org/wiki/Java_(software_platform)">Java</a> craze with
+<a href="https://en.wikipedia.org/wiki/Sun_Microsystems">Sun</a>'s push behind it
+- <a href="https://web.archive.org/web/20091014061541/http://www.thestreet.com/_yahoo/newsanalysis/techhardware/10376053.html?cm_ven=YAHOO&amp;cm_cat=FREE&amp;cm_ite=NA">they even changed the stock
+  symbol</a>
+  from <code>SUNW</code> to <code>JAVA</code> ffs:</p>
+<blockquote>
+<p>Sun stated that the brand awareness associated with its Java platform better
+represented the company's current strategy.</p>
+</blockquote>
+<p>Later below I do mention that the original <strong>correct</strong> <strong>message-passing</strong> version
+of the <strong>Object-Oriented</strong> programming style can be elegant and useful.</p>
+<p>I can also see how <strong>well</strong> (!) designed <strong>class-ical</strong> Object-Oriented style
+can help to reign in the code complexity <strong>but</strong> the idea to layer one
+<strong>abstraction</strong> upon another <strong>abstraction</strong> upon another... creates a system
+which is not only fragile and complex (that is your problem to maintain as
+programmer) but most importantly it results in a software which is slow and
+bloated and that is a problem for me, you and everyone who wants to use it.</p>
+<p>If everyone will create <a href="/rants/bloat/">bloated software</a> then computing
+suffers at large as this culture of OOP styled bloated software becomes a new
+norm (already did).</p>
+<p>Once we reach a point where I need <strong>more memory</strong> and my <strong>CPU has to do more
+cycles</strong> because you as programmer tried to make your life little easier (did
+you though?) then I must go on a crusade:</p>
+<p><em>Most of my time I spend using the computer and a software running on it - do
+not waste my resources and my time please...</em></p>
+<hr />
+<h2 id="alternatives-exist">Alternatives exist<a class="headerlink" href="#alternatives-exist" title="Permanent link">#</a></h2>
+<h3 id="functional-programming"><a href="https://en.wikipedia.org/wiki/Functional_programming">Functional programming</a><a class="headerlink" href="#functional-programming" title="Permanent link">#</a></h3>
+<p>This programming paradigm is well-defined and clean albeit arguably harder to
+use as the imperative style of programming is more natural to most of us -
+everyone can follow cooking recipe but not everyone can implement a loop with
+<a href="https://en.wikipedia.org/wiki/Tail_call">tail-recursion</a>.</p>
+<p>You can go down the rabbit hole of using very formal languages with pure
+functions - the program can be actually mathematically proven to be correct.</p>
+<p>I will bring up again the paper <a href="https://curtclifton.net/papers/MoseleyMarks06a.pdf">Out of&nbsp;the&nbsp;Tar Pit</a>:</p>
+<blockquote>
+<p><em>The primary strength of functional programming is that by avoiding state
+(and side-effects) the entire system gains the property of referential
+transparency - which implies that when supplied with a given set of arguments
+a function will always return exactly the same result (speaking loosely we
+could say that it will always behave in the same way). Everything which can
+possibly affect the result in any way is always immediately visible in the
+actual parameters.</em></p>
+</blockquote>
+<p>You could also use more pragmatic approach and have some mutable state in
+controllable manner - many languages are actually multi-paradigm.</p>
+<p><strong>I am aware that many functional languages might perform worse than some "OOP"
+languages as the usual implementation requires fat runtime and
+garbage-collection...</strong></p>
+<h3 id="data-oriented-design"><a href="https://en.wikipedia.org/wiki/Data-oriented_design">Data-Oriented Design</a><a class="headerlink" href="#data-oriented-design" title="Permanent link">#</a></h3>
+<p>I would prefer to use software where the author understands the hardware
+architecture and CPU caches.</p>
+<blockquote>
+<p><em>The approach is to focus on the data layout, separating and sorting fields according to when they are needed, and to think about transformations of data.</em></p>
+<p><em>Although OOP appears to "organise code around data", it actually organises source code around data types rather than physically grouping individual fields and arrays in an efficient format for access by specific functions.</em></p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=rX0ItVEVjHc">Mike Acton - "Data-Oriented Design and C++"</a></p>
+<p><a href="https://www.youtube.com/watch?v=WDIkqP4JbkE">Scott Meyers - "Cpu Caches and Why You Care"</a></p>
+<p><a href="https://www.dataorienteddesign.com/dodbook/">Richard Fabian - Data-Oriented Design (book)</a></p>
+<hr />
+<h2 id="hijacked-terminology">Hijacked terminology<a class="headerlink" href="#hijacked-terminology" title="Permanent link">#</a></h2>
+<p>I can say for myself:</p>
+<p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">OOP</a> (the one with <strong><a href="https://en.wikipedia.org/wiki/Class_(programming)">classes</a></strong>) never felt right to me (with one exception: <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">(G)UI</a> making) - what makes sense to me are tiny objects sending messages as <a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a> envisioned (the man who coined the term <strong><a href="https://www.purl.org/stefan_ram/pub/doc_kay_oop_en">object-oriented programming</a></strong>):</p>
+<blockquote>
+<p><em>OOP to me means only messaging, local retention and protection and hiding
+of state-process, and extreme late-binding of all things. It can be done in
+Smalltalk and in LISP. There are possibly other systems in which this is
+possible, but I'm not aware of them.</em></p>
+</blockquote>
+<p>and I (and the man himself) believe that <a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)">Erlang</a> did it better, <a href="https://computinged.wordpress.com/2010/09/11/moti-asks-objects-never-well-hardly-ever/#comment-3766">quote</a>:</p>
+<blockquote>
+<p><em>Significant parts of Erlang are more like a real OOP language than the
+current Smalltalk, and certainly the C based languages that have been painted
+with “OOP paint”.</em></p>
+</blockquote>
+<p>and still from the same <a href="https://computinged.wordpress.com/2010/09/11/moti-asks-objects-never-well-hardly-ever/#comment-3766">comment</a>:</p>
+<blockquote>
+<p><em>I think the remedy is to consign the current wide-spread meanings of
+“object-oriented” to the rubbish heap of still taught bad ideas, and to make up
+a new term for what I and my colleagues did.</em></p>
+</blockquote>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oKg1hTOQXoY">Alan Kay at OOPSLA 1997</a>:</li>
+</ul>
+<blockquote>
+<p><em>I made up the term object-oriented and I can tell you I did not have C++ in mind.</em></p>
+</blockquote>
+<ul>
+<li>The creator of Erlang, <a href="https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer)">Joe Armstrong</a> said <a href="https://www.infoq.com/interviews/johnson-armstrong-oop/">on the topic</a>:</li>
+</ul>
+<blockquote>
+<p><em>Erlang might be the only object oriented language because the 3 tenets of
+object oriented programming are that it's based on message passing, that you
+have isolation between objects and have polymorphism.</em></p>
+</blockquote>
+<hr />
+<h2 id="object-oriented-undefined">Object-Oriented undefined<a class="headerlink" href="#object-oriented-undefined" title="Permanent link">#</a></h2>
+<p>Object-Oriented Programming
+(<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">OOP</a>) was never
+properly defined - <a href="https://wiki.c2.com/?NobodyAgreesOnWhatOoIs">everyone has some kind of floating
+definition</a>.</p>
+<p>On one side a <a href="https://www.ionos.com/digitalguide/websites/web-development/oop-in-c/">pure C can be OOP</a> and on the
+other a language without
+<a href="https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)">inheritance</a>
+is not deemed OOP at all by some.</p>
+<p>We can take this quote from the <strong>creator of C++</strong> <a href="https://www.stroustrup.com/oopsla.pdf">Bjarne Stroustrup</a>:</p>
+<div class="highlight" style="background: #0d1117"><pre style="line-height: 125%;"><span></span><code>    A language or technique is object-oriented
+    if and only if it directly supports:
+
+    [1] Abstraction – providing some form of classes
+        and objects.
+    [2] Inheritance – providing the ability to build
+        new abstractions out of existing ones.
+    [3] Run-time polymorphism – providing some
+        form of run-time binding.
+</code></pre></div>
+<p>OOP proponents usually list these things:</p>
+<ol>
+<li>abstraction (???)</li>
+<li>encapsulation</li>
+<li>inheritance</li>
+<li>polymorphism</li>
+</ol>
+<p>Why these people so often include the
+<a href="https://en.wikipedia.org/wiki/Abstraction">abstraction</a> as a pillar of OOP...</p>
+<p>I can only say: <strong>ABSTRACTION</strong> is so fundamental to programming in general
+that even hacking in assembly is literally an <em>abstraction</em> over hardware
+instructions...</p>
+<p><strong>Every kind of programming is abstraction - every program itself is
+abstraction of a problem domain...</strong></p>
+<p>The thing is that OOP fanatics obsess over the <strong>abstraction</strong> so much that
+they end up with abstraction upon abstraction, <a href="/rants/bloat/">bloat upon bloat</a> until the
+application needs gigabytes instead of kilobytes of memory...</p>
+<p>All of these OOP things can be done in many non-OOP languages...</p>
+<p>And because the OOP is such a poorly defined paradigm that there was a lot and
+lot of books written with the turn of the century and a religion of <a href="https://en.wikipedia.org/wiki/Design_Patterns">Design
+Patterns</a> was born.</p>
+<p>If your paradigm needs <strong>dogmatic guardrails</strong> so much then maybe it is not such a
+good paradigm... <strong>IMHO</strong></p>
+<hr />
+<h2 id="not-everything-is-tree">Not everything is tree<a class="headerlink" href="#not-everything-is-tree" title="Permanent link">#</a></h2>
+<p>Not everything can be neatly put in buckets, bins and shelves and categories.</p>
+<p>Not everything is hierarchical and not everything resembles trees...</p>
+<p><strong>OOP with classes is tedious exercise in taxonomy.</strong></p>
+<p>It is like organizing library of books - should this (hypothetical) book
+<strong>"Programming SMTP agent in C on Linux"</strong> go to the directory <code>Linux</code>,
+<code>Programming</code>, <code>C</code>, <code>Email</code> or <code>Networking</code>?</p>
+<p>Sure we could say <code>C</code> is under <code>Programming</code> or we could put book in
+<code>OS</code>/<code>Linux</code> or <code>Networking</code>/<code>Mail</code> but we still have to choose one path and
+leave out the other.</p>
+<p><strong>Taxonomy is hell.</strong></p>
+<hr />
+<h2 id="future-is-less-classy">Future is less classy :)<a class="headerlink" href="#future-is-less-classy" title="Permanent link">#</a></h2>
+<p>If I hear <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>
+then these comes to mind:</p>
+<ul>
+<li>xml, xml and another xml</li>
+<li>boilerplate everywhere</li>
+<li>noise and pile of files...</li>
+</ul>
+<p>Case in point (yes, it is exaggerated joke...):</p>
+<p><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition">FizzBuzzEnterpriseEdition</a></p>
+<p>I do believe that OOP will stay (same way as Java or C++ or
+<a href="https://en.wikipedia.org/wiki/COBOL">COBOL</a>...) but it also will diminish:</p>
+<ul>
+<li>emergence of <a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">Scala</a> and <a href="https://en.wikipedia.org/wiki/Kotlin">Kotlin</a> adding functional style in Java world</li>
+<li><a href="https://en.wikipedia.org/wiki/Clojure">Clojure</a> is another <a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM</a> language but purely functional</li>
+<li>many <em>new</em> languages are either functional or dropping <em>class-ic</em> OOP style: <a href="https://en.wikipedia.org/wiki/Lua">lua</a>, <a href="https://en.wikipedia.org/wiki/Elm_(programming_language)">elm</a>, <a href="https://en.wikipedia.org/wiki/Elixir_(programming_language)">elixir</a>, <a href="https://en.wikipedia.org/wiki/Julia_(programming_language)">Julia</a></li>
+<li>some are basically C-like procedural: <a href="https://ziglang.org/learn/why_zig_rust_d_cpp/">zig</a>, <a href="https://odin-lang.org/docs/faq/#is-odin-an-object-oriented-language">Odin</a></li>
+<li>modern C++ tends to promote metaprogramming and functional style (<a href="https://www.stroustrup.com/oopsla.pdf">Bjarne Stroustrup's paper</a>)</li>
+<li><a href="https://go.dev/doc/faq#Is_Go_an_object-oriented_language">Golang</a> has no inheritance</li>
+<li>even <a href="/rants/rust/">furries'</a> favorite <a href="https://doc.rust-lang.org/book/ch18-01-what-is-oo.html">rust</a> does not support OOP inheritance:</li>
+</ul>
+<blockquote>
+<p><em>If a language must have inheritance to be object oriented, then Rust is not
+such a language. There is no way to define a struct that inherits the parent
+struct’s fields and method implementations without using a macro.</em></p>
+</blockquote>
+<hr />
+<h2 id="slander-with-a-class">Slander with a class<a class="headerlink" href="#slander-with-a-class" title="Permanent link">#</a></h2>
+<p><strong>OOP criticism is a recurring event and many very smart people dropped more
+than few cents on this polemic:</strong></p>
+<p>Alan Kay on C++ at <a href="https://tinlizzie.org/IA/index.php/Alan_Kay_at_OOPSLA_1997:_The_Computer_Revolution_has_not_Happened_Yet">OOPSLA 1997</a>:</p>
+<blockquote>
+<p><em>I've been shown some very, very strange-looking pieces of code over the
+years by various people, including people in universities, that they have
+said is OOP code, and written in an OOP language—and actually, I made up the
+term object-oriented, and I can tell you I did not have C++ in mind.</em></p>
+</blockquote>
+<p>Joe Armstrong's <a href="https://codersatwork.com/">banana quote</a>:</p>
+<blockquote>
+<p><em>The problem with object-oriented languages is they’ve got all this implicit
+environment that they carry around with them. You wanted a banana but what you
+got was a gorilla holding the banana and the entire jungle.</em></p>
+</blockquote>
+<p>Venerable <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Dijkstra</a> and his <a href="https://www.scranton.edu/faculty/mccloskey/dijkstra_quotes.html">quote</a>:</p>
+<blockquote>
+<p><em>Object-oriented programming is an exceptionally bad idea which could only
+have originated in California.</em></p>
+</blockquote>
+<p>Author of C++ STL, <a href="https://www.stepanovpapers.com/LoRusso_Interview.htm">Alexander Stepanov</a>:</p>
+<blockquote>
+<p><em>Yes. STL is not object oriented. I think that object orientedness is almost
+as much of a hoax as Artificial Intelligence. I have yet to see an interesting
+piece of code that comes from these OO people.</em></p>
+</blockquote>
+<hr />
+<h2 id="oop-good-parts">OOP Good Parts (?)<a class="headerlink" href="#oop-good-parts" title="Permanent link">#</a></h2>
+<p>There are places where all that class hierarchy shines...</p>
+<p>It works well with (G)UI toolkits - designing widget sets where each widget is
+modelled as a class with subclasses seems to fit nicely with OOP.</p>
+<p>It worked great for <a href="https://en.wikipedia.org/wiki/Delphi_(software)">Delphi</a> on Windows.</p>
+<p><a href="http://www.catb.org/~esr/writings/taoup/html/unix_and_oo.html">The Art of Unix Programming</a>:</p>
+<blockquote>
+<p><em>The OO design concept initially proved valuable in the design of graphics
+systems, graphical user interfaces, and certain kinds of simulation. To the
+surprise and gradual disillusionment of many, it has proven difficult to
+demonstrate significant benefits of OO outside those areas. It's worth trying
+to understand why.</em></p>
+<p><em>One reason that OO has succeeded most where it has (GUIs, simulation,
+graphics) may be because it's relatively difficult to get the ontology of types
+wrong in those domains. In GUIs and graphics, for example, there is generally a
+rather natural mapping between manipulable visual objects and classes. If you
+find yourself proliferating classes that have no obvious mapping to what goes
+on in the display, it is correspondingly easy to notice that the glue has
+gotten too thick.</em></p>
+</blockquote>
+<p>from the same:</p>
+<blockquote>
+<p><em>OO languages make abstraction easy — perhaps too easy. They encourage
+architectures with thick glue and elaborate layers. This can be good when the
+problem domain is truly complex and demands a lot of abstraction, but it can
+backfire badly if coders end up doing simple things in complex ways just
+because they can.</em></p>
+<p><em>This tendency is probably exacerbated because a lot of programming courses
+teach thick layering as a way to satisfy the Rule of Representation. In this
+view, having lots of classes is equated with embedding knowledge in your data.
+The problem with this is that too often, the ‘smart data’ in the glue layers is
+not actually about any natural entity in whatever the program is manipulating —
+it's just about being glue.</em></p>
+</blockquote>
+<p>OOP is positioned well to make nice graphical data model and behavior but
+when it goes overboard with abstractions then this layering (IMHO) is
+responsible for the current state of software: <a href="/rants/bloat/">bloatware</a></p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

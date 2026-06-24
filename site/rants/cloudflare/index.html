@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/rants/cloudflare/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+
+
+    
+ 
+<title>I hate modern Internet - ospalax.cz</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#cloudflare-internet-club">Cloudflare internet club</a></li>
+        <li><a href="#internet-spheres-jails">Internet spheres (jails)</a></li>
+        <li><a href="#browser-situation">Browser situation</a></li>
+        <li><a href="#modern-internet-sucks">Modern internet sucks!</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="i-hate-modern-internet">I hate modern Internet<a class="headerlink" href="#i-hate-modern-internet" title="Permanent link">#</a></h1>
+<p>Did you ever encounter this?</p>
+<h2 id="cloudflare-internet-club">Cloudflare internet club<a class="headerlink" href="#cloudflare-internet-club" title="Permanent link">#</a></h2>
+<p><img width=800px src="../../img/cloudflare/cloudflare_club_just_a_moment_800.jpg" alt="Cloudflare Block" /></p>
+<p>My reaction is always the same:</p>
+<p><img width=800px src="../../img/cloudflare/how_about_no.gif" alt="Dr. Evil saying no" /></p>
+<p>I see it too often to my liking.</p>
+<p>It partitions <strong>world wide web</strong> into free internet and gated <strong>💩&nbsp;cloudflare&nbsp;💩</strong> internet.</p>
+<p>I refuse to allow cloudflare to run their <em>challenges</em> in my browser which then
+eats my memory and kills my CPU - they really don't work nicely with
+<a href="https://noscript.net/">NoScript</a> - you allow to run one URL and it's start to
+go absolute berserk in some cases.</p>
+<p>I always have opened half a dozen of apps and just my browser has dozen of windows with
+dozens of tabs each... and I like it that way - I suspend my laptop when I need
+and return back to unfinished work - for days on end...</p>
+<p>I really hate when rogue website throws a wrench to it and triggers
+<a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM-killer</a>.</p>
+<p>I own my hardware (all 16-32 GB of RAM and 12+ cores) not cloudflare and not
+any other website (banking website are offenders too) - <strong>Don't run your crap
+on my system!!</strong></p>
+<p>This really boils my blood and you did not ask for permission and I did not
+agree to it!!!</p>
+<p>Do you want to rent my computing power? Fine, <strong>PAY ME</strong> then...</p>
+<p>I get it - bots and <a href="https://cacm.acm.org/opinion/ai-scraping-and-the-open-web/">aislop companies scraping
+internet</a> are
+<a href="https://en.wiktionary.org/wiki/pain_in_the_ass">PITA</a> but many other sites
+cope with the decline of the open web much gracefully - cloudflare is so in my
+face.</p>
+<p>But it is not just cloudflare partition...</p>
+<hr />
+<h2 id="internet-spheres-jails">Internet spheres (jails)<a class="headerlink" href="#internet-spheres-jails" title="Permanent link">#</a></h2>
+<p>In no particular order.</p>
+<h3 id="cloudflare">💩&nbsp;Cloudflare&nbsp;<a class="headerlink" href="#cloudflare" title="Permanent link">#</a></h3>
+<p>It got its due above.</p>
+<h3 id="apple">💩&nbsp;Apple&nbsp;<a class="headerlink" href="#apple" title="Permanent link">#</a></h3>
+<p>I don't use and I don't care...</p>
+<h3 id="google">💩&nbsp;Google&nbsp;<a class="headerlink" href="#google" title="Permanent link">#</a></h3>
+<p><strong>Google</strong> is working for years to create walled garden just for themselves
+- it is why they made <strong>💩&nbsp;chrome&nbsp;💩</strong> browser in the first place (and dropped
+company slogan <a href="https://time.com/4060575/alphabet-google-dont-be-evil/">Don't be
+Evil</a>).</p>
+<p>Google sphere is huge... I don't use google search engine for years (not
+directly at least) but most of the planet still do...</p>
+<p><a href="https://www.youtube.com/watch?v=X5NSdq2IRSk">Not for long maybe?</a></p>
+<p>Google's <strong>YouTube</strong> is the go to place for people to watch content. Lot of
+technologies is backed by google and their services have fingers everywhere.
+You probably cannot go online without google noticing...</p>
+<h3 id="facebook">💩&nbsp;Facebook&nbsp;<a class="headerlink" href="#facebook" title="Permanent link">#</a></h3>
+<p>Other big sphere is <strong>facebook</strong> - I have only dummy profile there (why?  just
+a moment) and I always boycotted it since inception of that
+<strong>💩&nbsp;<a href="https://en.wikipedia.org/wiki/Social_media">socmed</a>&nbsp;💩</strong>
+nonsense. Why the hell you want to tell on yourself everything??
+You make it so easy for surveillance state and three letter agencies...</p>
+<p><em>(hmm, maybe I should take my own advice, oh well)</em></p>
+<p><strong>Avoid this <a href="https://www.forbes.com/sites/steveforbes/2025/09/09/people-are-being-thrown-in-uk-prisons-over-what-theyve-said-online-can-free-speech-be-saved/">prison island</a>...</strong></p>
+<p>But so many groups even companies have only facebook page to reach them... In 9
+out of 10 encounters with such page I just look elsewhere than to bother to
+login (container tab).</p>
+<p>In one out of ten cases though I do login 🤬 ... and so I have dummy profile on
+the poop pages - just for that one out of ten reasons when I have no other
+option.</p>
+<p>That is another section of the internet behind a wall with a gate I refuse to
+enter.</p>
+<h3 id="twatter">💩&nbsp;Twatter&nbsp;<a class="headerlink" href="#twatter" title="Permanent link">#</a></h3>
+<p>It was always a censoring echo chamber and a cesspool. Now as <strong>"X"</strong> it is
+better (why name change though?) but still no reason for me to ever use let
+alone register.</p>
+<p>Inconsequential to me personally.</p>
+<h3 id="microslop">💩&nbsp;Microslop&nbsp;<a class="headerlink" href="#microslop" title="Permanent link">#</a></h3>
+<p><strong><a href="https://en.wiktionary.org/wiki/Microslop">Microslop</a></strong> is surely another
+sphere but I don't really come to contact with it - I don't use their <strong>bing</strong>
+search (not even by a proxy) and I certainly don't use their
+<strong><a href="https://en.wikipedia.org/wiki/Microsoft_Windows">SpywareOS&nbsp;&reg;</a></strong>
+unless it is company laptop in which case is better to just change the job if
+one can.</p>
+<p>They did buy <strong>github</strong> though and I am not ready to leave that yet.</p>
+<h3 id="wikipedia">💩&nbsp;Wikipedia&nbsp;<a class="headerlink" href="#wikipedia" title="Permanent link">#</a></h3>
+<p>As you can notice I do link to it very often because it is convenient...</p>
+<p>I will not be doing deep-dive on this one - this deserves a separate article.</p>
+<p>Just briefly:</p>
+<ul>
+<li>Wikipedia is go to place and first one to check for many of us</li>
+<li><a href="https://www.thefp.com/p/i-founded-wikipedia-heres-how-to-fix-it">Wikipedia is fully hijacked by activists</a></li>
+<li>Wikipedia was always unreliable (for a reason) - Do not cite?</li>
+<li><a href="https://lunduke.locals.com/post/4458111/the-wiki-piggy-bank">They use donations on non-wiki reason</a> (read activism)</li>
+</ul>
+<p><a href="https://www.stopfake.org/en/the-wikipedia-wars/">Edit wars</a> are real and
+anything even tangently touching politics cannot be relied upon.</p>
+<p>E.g. I wanted to link controversy about this scumbag: <a href="https://en.wikipedia.org/wiki/Mitchell_Baker#Negative_salary-achievements_correlation_controversy">Mitchell Baker</a></p>
+<p>But the interesting section was deleted - I had to look for it in the history: <a href="https://en.wikipedia.org/w/index.php?title=Mitchell_Baker&amp;oldid=1102372789#Negative_salary-achievements_correlation_controversy">Old version</a></p>
+<p>Lastly - they constantly beg for money but you know what?</p>
+<p><a href="https://lunduke.locals.com/post/4458111/the-wiki-piggy-bank">They have plenty already...</a></p>
+<p>Therefore we need an alternative.</p>
+<hr />
+<h2 id="browser-situation">Browser situation<a class="headerlink" href="#browser-situation" title="Permanent link">#</a></h2>
+<p>My pondering on this in another rant: <a href="/rants/browser/">Browsing for Browser</a>.</p>
+<hr />
+<h2 id="modern-internet-sucks">Modern internet sucks!<a class="headerlink" href="#modern-internet-sucks" title="Permanent link">#</a></h2>
+<p>It suffers from <a href="https://www.youtube.com/watch?v=T4Upf_B9RLQ">ensh!ttification</a> and <a href="/rants/bloat/">bloat</a>&nbsp;💩.</p>
+<p>We need resurgence of the old - hobby and personal websites and no big tech
+(and new browsers).</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

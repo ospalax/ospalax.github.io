@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/rants/rust/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+
+
+    
+ 
+<title>Cargo Cult - ospalax.cz</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#rust-lang">Rust-lang</a></li>
+        <li><a href="#cult-of-rust">Cult of Rust</a></li>
+        <li><a href="#furry-invasion">Furry Invasion</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="cargo-cult">Cargo Cult<a class="headerlink" href="#cargo-cult" title="Permanent link">#</a></h1>
+<p>I briefly tackled this topic when I wrote this:</p>
+<p><a href="/rants/gnulinuxp2/">Linux vs GNU/Linux PART 2</a></p>
+<p>Let's recap some good references from there:</p>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/vyelva/why_are_there_so_many_furry_rustaceans/">Rust
+  Programmers</a></li>
+<li><a href="https://www.businessinsider.com/furry-fandom-big-tech-software-developers-2022-3">How Furries Came to Rule the Tech Industry - Business
+  Insider</a></li>
+<li><a href="https://www.nichstack.com/p/cargo-cult">The problem with Rust</a></li>
+<li><a href="https://felipec.wordpress.com/2025/02/13/rust-not-for-linux/">Rust doesn’t belong in the Linux kernel; it’s all about
+  ideology</a></li>
+</ul>
+<h2 id="rust-lang">Rust-lang<a class="headerlink" href="#rust-lang" title="Permanent link">#</a></h2>
+<p>For the record I don't hate on rust but I also don't think that it is <em>be-all
+and end-all</em> kind of language (unless it will keep evolving with breaking
+changes).</p>
+<p>When I first started hearing about it then I thought to myself that it is truly
+unique.</p>
+<p>Often times when there is some new fancy programming language which becomes the
+new latest fad then there is some gimmick to it or some syntax sugar but it
+usually just turns out as something what
+<a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">LISP</a> had already
+in 1960s... or what was written in 1970s (<a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes">Hoare's CSP
+paper</a>) in
+the case of <a href="https://go.dev/">golang</a>.</p>
+<p><strong>(Funny as it turned out that rust was also just dusting off old papers and
+features of decades old forgotten languages...)</strong></p>
+<p>Nevertheless - rust's <a href="https://rustc-dev-guide.rust-lang.org/borrow-check.html">borrow-checker</a> was novel and neat feature.</p>
+<p>Rust's author, <a href="https://wikitia.com/wiki/Graydon_Hoare">Graydon Hoare</a>,
+<strong>borrowed</strong> (hehe) from older languages and humbly
+<a href="http://web.archive.org/web/20260331010652/http://venge.net/graydon/talks/intro-talk-2.pdf">stated</a>
+that nothing new was in this <em>new</em> language.</p>
+<p><strong>I like many his ideas and goals but perhaps those could be done
+better?</strong></p>
+<p>As he said himself (<a href="https://web.archive.org/web/20230606002527/https://graydon2.dreamwidth.org/307291.html">archived
+version</a>):</p>
+<p><a href="https://graydon2.dreamwidth.org/307291.html">The Rust We Got is many, many miles away from The Rust I
+Wanted</a></p>
+<p>I would not mind to put rust-lang under my tool belt but the ugly syntax, the
+exhausting fight with the compiler and the attitude of their believers keep
+pushing it down the list for me.</p>
+<hr />
+<h2 id="cult-of-rust">Cult of Rust<a class="headerlink" href="#cult-of-rust" title="Permanent link">#</a></h2>
+<p>The issue is the community...</p>
+<ol>
+<li>They are (likely) <a href="https://www.businessinsider.com/furry-fandom-big-tech-software-developers-2022-3">furries</a> (more proof below)</li>
+<li>Their toxic <a href="https://enet4.github.io/rust-tropes/rust-evangelism-strike-force/">evangelism</a></li>
+<li>The <a href="https://enet4.github.io/rust-tropes/rewrite-in-rust/">trope of rewriting <strong>everything</strong></a> in rust</li>
+<li>Their <a href="https://rust-for-linux.com/">infestation</a> upon established projects as a PR stun</li>
+</ol>
+<p>There are many passionate programming communities but none behaves like this cult.</p>
+<h3 id="rust-programmer-is-probably-a-furry">Rust Programmer is (probably) a Furry...<a class="headerlink" href="#rust-programmer-is-probably-a-furry" title="Permanent link">#</a></h3>
+<p>Do you recall the <a href="https://en.wikipedia.org/wiki/Linked_list">linked list</a>
+as one of the basic memory data structure?</p>
+<p>Well, in rust you need a whole book on the topic:</p>
+<p><a href="https://rust-unofficial.github.io/too-many-lists/">Too Many Lists</a></p>
+<p>Do you know who wrote that book?</p>
+<p>A <a href="https://faultlore.com/">furry</a>...</p>
+<p>Case closed.</p>
+<hr />
+<h2 id="furry-invasion">Furry Invasion<a class="headerlink" href="#furry-invasion" title="Permanent link">#</a></h2>
+<p><img width=400px src="../../img/rust_programmers/furinvasion1.webp" alt="Invasion of Furries" /></p>
+<p>You can watch this funny series on youtube:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4uqKyofFfm0">First Contact</a></li>
+<li><a href="https://www.youtube.com/watch?v=m8qTsO4iRDY">Furry Crusades</a></li>
+</ul>
+<p>Furries are invading <a href="https://en.wikipedia.org/wiki/Rust_for_Linux">Linux
+spaces</a> - the biggest
+open-source codebase on the planet - critical for the whole world.</p>
+<p>No one would care if they would want to create <strong>brand new <em>rusted</em> operating
+system</strong> (which they tried: <a href="https://www.redox-os.org/">redox</a>).</p>
+<p>But making usable, functional, full-fledged operating system is too much
+work and still world would not care and therefore no glory, no PR in
+that...</p>
+<p>But hijacking <a href="https://en.wikipedia.org/wiki/Linux">the most important operating
+system</a> on the planet... that is a
+fat juicy target...</p>
+<p>You must ask why?</p>
+<p><strong>Furries have extreme need to rewrite even things which are deemed as the best
+pieces of software ever written:</strong></p>
+<ul>
+<li><a href="https://turso.tech/blog/introducing-limbo-a-complete-rewrite-of-sqlite-in-rust">Rewrite of
+  SQLite</a>
+  (Seriously?!)</li>
+<li><a href="https://lwn.net/Articles/1007907/">Rewriting essential Linux packages in
+  Rust</a></li>
+</ul>
+<p>Do you recall <a href="https://en.wikipedia.org/wiki/Heartbleed">heartbleed</a>?</p>
+<p>If someone said: <em>Let's rewrite messy
+<a href="https://en.wikipedia.org/wiki/OpenSSL">OpenSSL</a> in rust!</em></p>
+<p>Then I would have nothing to say...</p>
+<p>There was a real need to do something and so it happened:
+<a href="https://en.wikipedia.org/wiki/LibreSSL">LibreSSL</a></p>
+<p><strong>Gents from <a href="https://en.wikipedia.org/wiki/OpenBSD">OpenBSD</a> forked the
+OpenSSL and cleaned it up and it is still in C!</strong></p>
+<p>On the other hand: rewriting solid project just
+for sake of rewriting it in rust... is a mental
+disease...</p>
+<hr />
+<p>Lessons from the past: <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never
+Do</a></p>
+<p><strong>If something is not written in rust then it is <em>NOT</em> inherently
+bad, ugly, wrong or evil...</strong></p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Personal blog and portfolio"> 
+    
+    <meta name="author" content="Petr Ospalý"> 
+    
+    <link rel="canonical" href="https://www.ospalax.cz/rants/bloat/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico" />
+
+
+    
+ 
+<title>Fast Hardware, Slow Software - ospalax.cz</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- ospalax color palette -->
+<link href="../../css/palettes/ospalax.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <img width=32 height=32 src=../../img/logo/ospalax-logo-blue.png>&nbsp;
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://www.ospalax.cz/" class="no-style">ospalax.cz</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../me/contact/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Contact</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contact/">Contact</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/">About Me</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/experience/">Experience</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/contributions/">Contributions</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../me/CV_Petr_Ospaly.pdf">CV</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/">Knowledge Base</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+                    
+                
+            
+
+            
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/">KBU (Linux)</a>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/linux/">&nbsp; → Linux OS</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbu/os/shell/">&nbsp; → Shell Scripting</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../docs/kbpages/gnulinux/">Linux vs GNU/Linux</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/">Things</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../things/maker/arduino_lcdplay_01/">Arduino LCD Experiment</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+            
+                
+                
+        
+
+             
+            
+    
+        
+        <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Rated R( a n t s )</a>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#moores-law">Moore's law</a></li>
+        <li><a href="#pocket-computers">Pocket Computers</a></li>
+        <li><a href="#bloatware">Bloatware</a></li>
+        <li><a href="#enshttification">💩&nbsp;ensh!ttification&nbsp;💩</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="fast-hardware-slow-software">Fast Hardware, Slow Software<a class="headerlink" href="#fast-hardware-slow-software" title="Permanent link">#</a></h1>
+<p>My old low budget phone in my pocket has at least 8-10 times more power than my
+PC desktop back in high school and six times more of memory.</p>
+<p>The puzzling thing is... They both feel equal...</p>
+<h2 id="moores-law"><a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore's law</a><a class="headerlink" href="#moores-law" title="Permanent link">#</a></h2>
+<p>Hardware performance improved exponentially year by year but the same
+observation cannot be said about our software - quite the opposite - if not for
+fast hardware then the modern software inefficiency would be that much more
+obvious to us.</p>
+<p>Programmers got more and more memory and lost all the discipline to not waste
+it. Something unacceptable in the previous era when wasting resources was
+prohibited due to hard constraints in the hardware.</p>
+<p>Java ecosystem was notorious for high memory usage and terrible speeds - but
+the PR was so strong that it hijacked academia and a lot of stuff was written
+in it... even today.</p>
+<hr />
+<h2 id="pocket-computers">Pocket Computers<a class="headerlink" href="#pocket-computers" title="Permanent link">#</a></h2>
+<p>It is remarkable that we all can have personal computers in our pockets which
+would run circles around the average desktop computers a decade prior.</p>
+<p>Despite that this phone of mine multiple times more powerful achieves the same
+ergonomics as a single core machine from cca <strong>2005</strong>.</p>
+<p>And I don't even utilize it to its full potential because <strong>some</strong> company
+introduced <a href="https://en.wikipedia.org/wiki/IPhone">smudge phone</a> and shortly
+after all phones and any other pocket device dropped hardware keyboards.</p>
+<p><strong>(I am still waiting for a Linux Phone)</strong></p>
+<hr />
+<h2 id="bloatware">Bloatware<a class="headerlink" href="#bloatware" title="Permanent link">#</a></h2>
+<p>With my old PC I browsed the web, watched online videos on the still
+<strong>pre-google</strong> YouTube, played AAA games of the era
+(<a href="https://en.wikipedia.org/wiki/Half-Life_2">Half-Life&nbsp;2</a>,
+<a href="https://en.wikipedia.org/wiki/Doom_3">Doom&nbsp;3</a>), coded in
+<a href="https://en.wikipedia.org/wiki/Delphi_(software)">Delphi</a> and
+<a href="https://www.codeblocks.org/">C</a>, made documents with office suite, dabbled
+with <a href="https://en.wikipedia.org/wiki/Autodesk_3ds_Max">3ds Max</a>...</p>
+<p><em>(The hardware aged pretty quickly back then but I was using this particular PC
+successfully past its era... thanks to </em><em>Linux</em><em>.)</em></p>
+<p>What's more, nowadays I need at least 20 times more performant machine to be
+able to reach the same ergonomics on my current desktop like in 2000s with just
+a single core and 2 GBs of memory.</p>
+<p>Why is that?</p>
+<p><em>Yes, the web then and now is not the same. Now every site runs thousands lines
+of javascript to just spin a wheel and abuse my computer with their code like
+my CPU and RAM belongs to them and not to me... All the while they violate my
+privacy and constantly spy on us. <a href="/rants/cloudflare/">I hate modern Internet</a>.</em></p>
+<p>The point stands: <strong>I get the same value from both machines but one needed
+fraction of the raw power.</strong></p>
+<hr />
+<h2 id="enshttification">💩&nbsp;ensh!ttification&nbsp;💩<a class="headerlink" href="#enshttification" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=T4Upf_B9RLQ">A Day in the Life of an Ensh*ttificator</a></li>
+<li><a href="https://www.forbrukerradet.no/news-in-english/digital-products-and-services-are-getting-worse-but-the-trend-can-be-reversed/">Software and Services Sucks</a></li>
+</ul>
+<p>This term was coined to describe the way online services degrades over time but
+I think that even without the original meaning it fits here: everything seems
+to be more sh!tty 💩💩💩</p>
+<p>Do you remember <a href="https://en.wikipedia.org/wiki/Skype">Skype</a>?</p>
+<p><a href="https://en.wiktionary.org/wiki/Microslop">Microslop</a> replaced it with
+something <a href="https://news.ycombinator.com/item?id=34778083">buggy, huge and slow</a>
+which feels like booting another internet browser...</p>
+<p><img width=800px src="../../img/slop/Casey_Muratori_Modern_software_performance.png" alt="Casey Muratori Mocks Modern Software Performance" /></p>
+<p><a href="https://news.ycombinator.com/item?id=35351760">Modern software performance is firmly in its “beyond parody” stage.</a></p>
+<p>Software became more slow and more bloated with every passing year. Abstraction
+upon abstraction, layers of misdirections, plethora of dependencies just to
+avoid <em>reinventing a wheel</em> or to <em>simplify development</em>.</p>
+<p>Even legit sites are running slop on my machine without asking and too many
+times browser tabs explode with hundreds (!) of megabytes in memory.</p>
+<p>I have <a href="https://noscript.net/">NoScript</a> extension enabled by default and I
+allow the js to load and run <strong>only</strong> when I really cannot avoid it.</p>
+<p>Add <em>vibe-coded</em> <a href="https://testrigor.com/blog/what-is-vibe-slopping/">slop</a> on
+top of all of it and I don't see any hope for improvement.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            
+            <p class="text-center text-muted">© <a href='m&#97;il&#116;o&#58;p%&#54;5t&#114;&#64;&#111;s&#112;%6&#49;%6Ca&#120;%&#50;Ec&#37;7&#65;?subject=I have an interest in your service thanks to your profile on ospalax.cz'>p&#101;tr&#64;osp&#97;lax&#46;&#99;&#122;</a><!--<span style="color: #00000000"># made with <a style="color: #00000000" href="http://www.mkdocs.org">MkDocs</a> and <a style="color: #00000000" href="https://github.com/ntno/mkdocs-terminal">Terminal</a> theme</span>--></p>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
